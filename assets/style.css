@@ -68,13 +68,6 @@ body {
 
 }
 
-.debug {
-
-    footer {
-        background-color: rgb(60, 208, 77);
-    }
-}
-
 
 /* end COMMON */
 
@@ -206,12 +199,11 @@ main {
             flex-wrap: wrap;
             gap: 1rem;
 
-            .card
-            {
+            .card {
                 img {
                     border-radius: 100%;
                 }
-                
+
             }
         }
 
@@ -229,6 +221,40 @@ main {
 /* FOOTER */
 footer {
     height: 91px;
+    background-color: var(--spo-light-shade3);
+
+    .footer-left {
+
+        align-items: center;
+
+        img {
+            height: 2rem;
+            margin: 1.5rem 0 2rem 1rem;
+            margin-right: 0.5rem;
+        }
+
+        .text-player {
+
+            flex-direction: column;
+            justify-content: center;
+            
+
+            .title-player {
+                color: var(--spo-primary);
+                font-weight: 800;
+                font-size: 12px;
+            }
+
+            .subtitle-player,
+            .artist-player {
+                color: var(--spo-lighter-shade);
+                font-weight: 600;
+                font-size: 10px;
+            }
+        }
+
+
+    }
 }
 
 /* end FOOTER */
