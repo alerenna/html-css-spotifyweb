@@ -6,6 +6,8 @@
     margin: 0;
 }
 
+
+
 :root {
     --spo-primary: #FDFDFD;
     --spo--lighter: #D2D2D2;
@@ -15,6 +17,7 @@
     --spo-light-shade3: #282828;
     --spo-dark-shade: #141922;
     --spo-dark-shade2: #080B12;
+    --spo-dark-shade3: #808080;
     --spo-dark: #000000;
     --spo-accent-color: #ADFF2F;
 }
@@ -24,13 +27,16 @@
     display: flex;
 }
 
+body
+{
+    min-width: 552px;
+    font-family: "Montserrat", serif;;
+}
+
 .debug {
     .top {
         background-color: aqua;
 
-        .sidebar {
-            background-color: rgba(255, 0, 72, 0.284);
-        }
 
         .main {
             background-color: rgba(194, 208, 0, 0.284);
@@ -61,7 +67,39 @@
 /* SIDEBAR */
 
 .sidebar {
-    width: 50px;
+    background-color: var(--spo-dark);
+    max-width: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3rem 0.5rem;
+
+    .top-sidebar
+    {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .bottom-sidebar
+    {
+        flex-direction: column;
+        align-items:center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .profile
+        {
+            text-align: center;
+            background-color: var(--spo-dark-shade3);
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+        }
+    }
+    
+    .icon {
+        color: red;
+    }
+    
 }
 
 /* end SIDEBAR */
@@ -98,19 +136,31 @@ footer {
 /* MOBILE LARGE */
 @media screen and (min-width: 639px)
 {
-    .top{
-        
-        .sidebar {
-            background-color: red;
-            width: 230px;
-        }
-
+    body
+    {
+        min-width: 639px;
     }
 
+    .sidebar
+    {
+        max-width: 230px;
+    }
 }
 
 /* TABLET */
-@media screen and (min-width: 878px) {}
+@media screen and (min-width: 878px) {
+
+    body
+    {
+        min-width: 878px;
+    }
+}
 
 /* DEKSTOP */
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+
+    body
+    {
+        min-width: 1440px;
+    }
+}
