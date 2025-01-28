@@ -1,12 +1,46 @@
 /* COMMON */
 
-*
-{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+:root {
+    --spo-primary: #FDFDFD;
+    --spo--lighter: #D2D2D2;
+    --spo-lighter-shade: #7C7E83;
+    --spo-light-shade: #6F6F6F;
+    --spo-light-shade2: #5A5A5A;
+    --spo-light-shade3: #282828;
+    --spo-dark-shade: #141922;
+    --spo-dark-shade2: #080B12;
+    --spo-dark: #000000;
+    --spo-accent-color: #ADFF2F;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.debug {
+    .top {
+        background-color: aqua;
+
+        .sidebar {
+            background-color: rgba(255, 0, 72, 0.284);
+        }
+
+        .main {
+            background-color: rgba(194, 208, 0, 0.284);
+        }
+    }
+
+    footer {
+        background-color: rgb(60, 208, 77);
+    }
+}
 
 
 /* end COMMON */
@@ -20,11 +54,29 @@
 /* end BUTTONS */
 
 /* !!TOP!! */
+.top {
+    flex-direction: row;
+}
+
 /* SIDEBAR */
+
+.sidebar {
+    width: 50px;
+}
 
 /* end SIDEBAR */
 
 /* MAIN */
+main {
+    .bottom-main {
+        height: calc(100vh - 181px);
+        overflow-y: auto;
+    }
+
+    .top-main {
+        height: 90px;
+    }
+}
 
 /* end MAIN */
 
@@ -33,6 +85,9 @@
 /* !!BOTTOM!! */
 
 /* FOOTER */
+footer {
+    height: 91px;
+}
 
 /* end FOOTER */
 
@@ -41,8 +96,21 @@
 /* RESPONSIVE */
 
 /* MOBILE LARGE */
+@media screen and (min-width: 639px)
+{
+    .top{
+        
+        .sidebar {
+            background-color: red;
+            width: 230px;
+        }
+
+    }
+
+}
 
 /* TABLET */
+@media screen and (min-width: 878px) {}
 
 /* DEKSTOP */
-
+@media screen and (min-width: 1440px) {}
