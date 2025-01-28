@@ -56,6 +56,13 @@ body
 /* end LAYOUT */
 
 /* BUTTONS */
+.btn {
+    text-decoration: none;
+    border: solid white;
+    border-radius: 2rem;
+    padding: 0.75rem 3rem;
+    color: white;
+}
 
 /* end BUTTONS */
 
@@ -113,6 +120,19 @@ main {
 
     .top-main {
         height: 90px;
+        text-align: end;
+        background-color: var(--spo-dark-shade2);
+        position: relative;
+       
+
+        .btn
+        {
+            position: absolute;    
+            font-size: 14px;
+            margin: 0.5rem;
+            top: 15%;
+            right: 0.5rem;
+        }
     }
 }
 
