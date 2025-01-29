@@ -142,9 +142,9 @@ body {
         }
     }
 
-    .icon {
+    /* .icon {
         color: red;
-    }
+    } */
 
 }
 
@@ -280,6 +280,12 @@ footer {
                 font-size: 10px;
             }
 
+            .player
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
 
         }
 
@@ -289,7 +295,7 @@ footer {
 
         .left-icons {
             flex-direction: column;
-            margin-left: 0.2rem;
+            margin-left: 0.5rem;
         }
 
     }
@@ -319,12 +325,23 @@ footer {
 
         .center-bottom {
             align-items: center;
+            justify-content: space-between;
+            width: 100%;
 
             .play-time,
             .end-time {
                 color: var(--spo-primary);
                 font-size: 10px;
                 font-weight: 600;
+            }
+
+            .time-line {
+                flex-grow: 5;
+                background-color: var(--spo-lighter-shade);
+                height: 0.2rem;
+                border-radius: 3rem;
+                margin: 0.5rem;
+                
             }
 
             /* .song-time {
@@ -334,19 +351,12 @@ footer {
                 border-radius: 3rem;
                 margin: 0 0.5rem;
                 }   */
-
-            .time-line {
-                background-color: var(--spo-lighter-shade);
-                width: 8rem;
-                height: 0.2rem;
-                border-radius: 3rem;
-                margin: 0.5rem;
-            }
         }
     }
 
     .footer-right {
         align-items: center;
+        justify-content: flex-end;
         flex-grow: 1;
 
         .right-icons {
@@ -372,8 +382,6 @@ footer {
 
 /* MOBILE LARGE */
 @media screen and (min-width: 639px) {
-
-
     .sidebar {
         min-width: 230px;
         padding-left: 1.5rem;
@@ -454,7 +462,6 @@ footer {
 
         }
 
-
         /* BOTTOM */
         .bottom-sidebar {
             flex-direction: column;
@@ -502,21 +509,50 @@ footer {
             }
 
         }
+
+    
+    }
+
+    footer
+    {
+        .footer-left
+        {
+            .text-player
+            {
+                .player
+                {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.2rem;
+                }
+
+            }
+        }    
     }
 }
 
 /* TABLET */
 @media screen and (min-width: 878px) {
-
     .card {
         max-width: calc(100% / 4 - 1rem);
+    }
+
+    footer
+    {
+        .footer-left
+        {
+            
+            .left-icons
+            {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+        }
     }
 }
 
 /* DEKSTOP */
 @media screen and (min-width: 1440px) {
-
-
     .card {
         max-width: calc(100% / 6 - 1rem);
     }
