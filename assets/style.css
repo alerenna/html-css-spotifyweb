@@ -409,13 +409,24 @@ footer {
                 font-weight: 600;
             }
 
+            
+
             .time-line {
                 flex-grow: 5;
-                background-color: var(--spo-lighter-shade);
+                background-color: var(--spo-light-shade2);
                 height: 0.2rem;
                 border-radius: 3rem;
                 margin: 0.5rem;
-                
+
+                .time
+                {
+                    position: absolute;
+                    z-index: 20;
+                    width: 10%;
+                    background-color: var(--spo-lighter-shade);
+                    height: 0.2rem;
+                    border-radius: 3rem;
+                }
             }
 
             /* .song-time {
@@ -439,11 +450,21 @@ footer {
         }
 
         .volume-bar {
-            background-color: var(--spo-lighter-shade);
-            width: 4rem;
+            background-color: var(--spo-light-shade2);
+            flex-grow: 2;
             height: 0.2rem;
             border-radius: 3rem;
             margin: 0.75rem;
+
+            .actual-volume
+                {
+                    position: absolute;
+                    z-index: 22;
+                    width: 2%;
+                    background-color: var(--spo-lighter-shade);
+                    height: 0.2rem;
+                    border-radius: 3rem;
+                }            
         }
     }
 }
@@ -486,6 +507,11 @@ footer {
                 color: var(--spo-lighter-shade);
                 font-weight: 800;
                 font-size: 14px;
+
+                &:hover
+                {
+                    color: var(--spo-primary);
+                }
             }
 
             .playlist {
