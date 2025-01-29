@@ -4,9 +4,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: all 200ms;
 }
-
-
 
 :root {
     --spo-primary: #FDFDFD;
@@ -28,7 +27,6 @@
 }
 
 body {
-    width: 552px;
     font-family: "Montserrat", serif;
     ;
 }
@@ -59,7 +57,7 @@ body {
 
 .card {
 
-    width: 48%;
+    max-width: calc(100% / 2 - 1rem);
 
 
     img {
@@ -103,13 +101,33 @@ body {
     .top-sidebar {
         flex-direction: column;
         gap: 1rem;
+
+        .logo-full {
+            display: none;
+        }
+
+        .icon-etiquette {
+            display: none;
+        }
+
+        .playlist {
+            display: none;
+        }
     }
 
     .bottom-sidebar {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        align-content: center;
         gap: 1rem;
         margin-bottom: 1rem;
+
+        .download-app {
+            .download {
+                display: none;
+            }
+        }
 
         .profile {
             text-align: center;
@@ -117,6 +135,10 @@ body {
             width: 30px;
             height: 30px;
             border-radius: 100%;
+
+            .username {
+                display: none;
+            }
         }
     }
 
@@ -140,6 +162,7 @@ main {
         text-align: end;
         background-color: var(--spo-dark-shade2);
         position: relative;
+
 
 
         .btn {
@@ -216,7 +239,7 @@ main {
 
 /* !!end TOP!! */
 
-/* !!BOTTOM!! */
+/* BOTTOM */
 
 /* FOOTER */
 footer {
@@ -312,23 +335,21 @@ footer {
                 margin: 0 0.5rem;
                 }   */
 
-                .time-line {
-                    background-color: var(--spo-lighter-shade);
-                    width: 8rem;
-                    height: 0.2rem;
-                    border-radius: 3rem;
-                    margin: 0.5rem;   
-                }
+            .time-line {
+                background-color: var(--spo-lighter-shade);
+                width: 8rem;
+                height: 0.2rem;
+                border-radius: 3rem;
+                margin: 0.5rem;
+            }
         }
     }
 
-    .footer-right
-    {
+    .footer-right {
         align-items: center;
         flex-grow: 1;
 
-        .right-icons
-        {
+        .right-icons {
             gap: 0.5rem;
             color: var(--spo-primary);
         }
@@ -338,40 +359,160 @@ footer {
             width: 4rem;
             height: 0.2rem;
             border-radius: 3rem;
-            margin: 0.75rem;   
+            margin: 0.75rem;
         }
     }
+}
 
-    /* end FOOTER */
+/* end FOOTER */
 
-    /* !!endBOTTOM!! */
+/* endBOTTOM */
 
-    /* RESPONSIVE */
+/* !!RESPONSIVE!! */
 
-    /* MOBILE LARGE */
-    @media screen and (min-width: 639px) {
-        body {
-            min-width: 639px;
+/* MOBILE LARGE */
+@media screen and (min-width: 639px) {
+
+
+    .sidebar {
+        min-width: 230px;
+        padding-left: 1.5rem;
+
+        .top-sidebar {
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: var(--spo-primary);
+            gap: 0.5rem;
+
+
+
+            .logo {
+                display: none;
+            }
+
+            .logo-full {
+                display: inline;
+                margin-top: 1rem;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+                height: 45px;
+            }
+
+            .icon-etiquette {
+                display: inline;
+                margin-right: 2rem;
+                color: var(--spo-lighter-shade);
+                font-weight: 800;
+                font-size: 14px;
+            }
+
+            .playlist {
+                display: flex;
+                flex-direction: column;
+
+                .playlist-title {
+                    margin-top: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                .add-playlist
+                {
+                    align-items: baseline;
+                    color: var(--spo-lighter-shade);
+                    font-weight: 700;
+                    font-size: 18px;
+
+                    .add-playlist-btn
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        background-color: var(--spo-lighter-shade);
+                        text-align: center;
+                        margin-bottom: 1rem;
+                        margin-right: 0.5rem;
+                        color: var(--spo-dark);
+                        font-size: 20px;
+                    }
+                }
+
+                
+
+                ul {
+                    list-style: none;
+                    color: var(--spo-lighter-shade);
+                    font-weight: 700;
+
+                    li {
+                        padding-bottom: 1rem;
+                    }
+
+                }
+            }
+
         }
 
-        .sidebar {
-            max-width: 230px;
+
+        /* BOTTOM */
+        .bottom-sidebar {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            .download-app {
+                padding-bottom: 0.75rem;
+                border-bottom: 0.1rem solid var(--spo-light-shade3);
+                width: 90%;
+
+                .download {
+                    display: inline;
+                    margin-left: 0.5rem;
+                    color: var(--spo-lighter-shade);
+                    font-weight: 800;
+                    font-size: 14px;
+                }
+            }
+
+            .user {
+
+                .profile {
+                    background-color: var(--spo-dark-shade3);
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+
+                    /* !!ALLINEARE TESTO A ICONA */
+                    .username {
+                        display: inline-block;
+                        margin-left: 0.5rem;
+                        color: var(--spo-primary);
+                        font-weight: 800;
+                        margin-left: 0.5rem;
+
+                    }
+                }
+            }
+
         }
     }
+}
 
-    /* TABLET */
-    @media screen and (min-width: 878px) {
+/* TABLET */
+@media screen and (min-width: 878px) {
 
-        body {
-            min-width: 878px;
-        }
+    .card {
+        max-width: calc(100% / 4 - 1rem);
     }
+}
 
-    /* DEKSTOP */
-    @media screen and (min-width: 1440px) {
+/* DEKSTOP */
+@media screen and (min-width: 1440px) {
 
-        body {
-            min-width: 1440px;
-        }
+
+    .card {
+        max-width: calc(100% / 6 - 1rem);
     }
-}    
+}
