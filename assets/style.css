@@ -463,6 +463,7 @@ footer {
             margin-bottom: 1rem;
 
             .download-app {
+                display: flex;
                 padding-bottom: 0.75rem;
                 border-bottom: 0.1rem solid var(--spo-light-shade3);
                 width: 90%;
@@ -476,23 +477,27 @@ footer {
                 }
             }
 
-            .user {
+            .user
+            {
+
+                display: flex;
+                align-items: baseline;
+                flex-wrap: nowrap;
 
                 .profile {
+                    
                     background-color: var(--spo-dark-shade3);
                     width: 30px;
                     height: 30px;
                     border-radius: 100%;
+                }
 
-                    /* !!ALLINEARE TESTO A ICONA */
-                    .username {
-                        display: inline-block;
-                        margin-left: 0.5rem;
-                        color: var(--spo-primary);
-                        font-weight: 800;
-                        margin-left: 0.5rem;
+                .username {
+                    margin-left: 0.5rem;
+                    color: var(--spo-primary);
+                    font-weight: 800;
+                    margin-left: 0.5rem;
 
-                    }
                 }
             }
 
