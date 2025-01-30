@@ -132,16 +132,19 @@ body {
 /* !!TOP!! */
 .top {
     flex-direction: row;
+    height: calc(100vh - 91px)
 }
 
 /* SIDEBAR */
 
 .sidebar {
     background-color: var(--spo-dark);
-    max-width: 50px;
+    width: 50px;
     flex-direction: column;
     justify-content: space-between;
     padding: 0.3rem 0.5rem;
+    overflow: hidden;
+    flex-shrink: 0;
 
     .top-sidebar {
         flex-direction: column;
@@ -226,7 +229,7 @@ main {
         }
 
         .btn:hover {
-            font-size: 14px;
+            transform: scale(1.05);
         }
     }
 
