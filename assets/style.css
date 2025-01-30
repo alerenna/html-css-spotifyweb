@@ -427,6 +427,37 @@ footer {
                     height: 0.2rem;
                     border-radius: 3rem;
                 }
+
+                .time-hover
+                {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    z-index: 22;
+                    width: 100%;
+                    background-color: var(--spo-accent-color);
+                    height: 0.3rem;
+                    border-radius: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    align-content: center;
+
+                    .dot
+                    {
+                        background-color: var(--spo-primary);
+                        height: 16px;
+                        width: 16px;
+                        border-radius: 100%;
+                        
+                    }
+                }
+
+                .time:hover .time-hover
+                    {
+                        opacity: 1;
+                        visibility: visible;
+                    }
             }
 
             /* .song-time {
@@ -464,7 +495,38 @@ footer {
                     background-color: var(--spo-lighter-shade);
                     height: 0.2rem;
                     border-radius: 3rem;
-                }            
+                }
+                
+                .volume-hover
+                {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    z-index: 22;
+                    width: 100%;
+                    background-color: var(--spo-accent-color);
+                    height: 0.3rem;
+                    border-radius: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    align-content: center;
+
+                    .dot
+                    {
+                        background-color: var(--spo-primary);
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 100%;
+                        
+                    }
+                }
+
+                .actual-volume:hover .volume-hover
+                    {
+                        opacity: 1;
+                        visibility: visible;
+                    }
         }
     }
 }
