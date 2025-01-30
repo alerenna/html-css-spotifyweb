@@ -557,11 +557,18 @@ footer {
                 height: 45px;
             }
 
+            .icon-sidebar
+            {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+            }
+
             .icon-etiquette {
                 display: inline;
                 margin-right: 2rem;
                 color: var(--spo-lighter-shade);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 14px;
 
                 &:hover
