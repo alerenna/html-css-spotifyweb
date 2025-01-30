@@ -192,9 +192,6 @@ body {
         }
     }
 
-    /* .icon {
-        color: red;
-    } */
 
 }
 
@@ -613,6 +610,9 @@ footer {
                     list-style: none;
                     color: var(--spo-lighter-shade);
                     font-weight: 700;
+                    max-height: 80vh; 
+                    overflow-y: auto; 
+                    padding: 10px;
 
                     li {
                         padding-bottom: 1rem;
