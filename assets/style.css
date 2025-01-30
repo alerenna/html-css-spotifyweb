@@ -667,7 +667,7 @@ footer {
             {
 
                 display: flex;
-                align-items: baseline;
+                align-items: center;
                 flex-wrap: nowrap;
 
                 .profile {
