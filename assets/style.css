@@ -152,6 +152,11 @@ body {
             display: none;
         }
 
+        .icon-sidebar
+        {
+            opacity: 0.7;
+        }
+
         .icon-etiquette {
             display: none;
         }
@@ -310,6 +315,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     gap: 1.5rem;
+    flex-shrink: 0;
 
     .footer-left {
 
@@ -553,7 +559,12 @@ footer {
                 gap: 0.3rem;
                 position: relative;
                 padding: 0.3rem 1rem;
-                
+
+                &:hover {
+                    opacity: 1;
+                }    
+               
+            
             }
 
             .icon-sidebar.home::before {
@@ -570,12 +581,11 @@ footer {
             .icon-etiquette {
                 display: inline;
                 margin-right: 2rem;
-                color: var(--spo-lighter-shade);
                 font-weight: 700;
                 font-size: 14px;
 
                 &:hover {
-                    color: var(--spo-primary);
+                    opacity:1;
                 }
             }
 
